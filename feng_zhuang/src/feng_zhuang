@@ -1,0 +1,6 @@
+1.封装性的体现：我们将类的属性私有化（private),同时提供公共的（public）方法来获取（get——xxx）
+  和设置（set——xxx）此属性的值
+2.程序设计追求：高内聚，低耦合
+3.java规定的四种权限(从小到大)：private,缺省(default)protected,public
+4.修饰类及类的内部结构：属性、方法、构造器、内部类
+                   修饰类只能用public和缺省
