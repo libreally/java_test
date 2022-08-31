@@ -9,7 +9,9 @@ public class Cilent {
     private Socket socket;
     public Cilent(){
         try {
+            System.out.println("正在连接服务端...");
             socket=new Socket("localhost",8088);
+            System.out.println("与服务端建立连接!");
         } catch (IOException e) {
             e.printStackTrace();
         }
