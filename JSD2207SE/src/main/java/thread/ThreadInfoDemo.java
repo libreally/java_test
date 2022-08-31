@@ -1,5 +1,7 @@
 package thread;
-
+/**
+ * 获取线程信息的相关方法
+ */
 public class ThreadInfoDemo {
     public static void main(String[] args) {
         Thread main=Thread.currentThread();
