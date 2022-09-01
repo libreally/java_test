@@ -2,7 +2,6 @@ package jihe.CollectionDemo4;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.TreeSet;
 
 /**
  * 集合转数组

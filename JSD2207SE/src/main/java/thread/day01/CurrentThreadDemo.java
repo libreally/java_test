@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 /**
  * java中所有的代码都是靠线程运行的，main方法也不例外。执行main方法的线程称为"主线程"
  *

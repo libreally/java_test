@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 /**
  * 守护线程

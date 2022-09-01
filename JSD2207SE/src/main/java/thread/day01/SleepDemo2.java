@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 /**
  * sleep方法要求我们必须处理中断异常。

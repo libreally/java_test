@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 /**
  * 匿名内部类创建两种线程

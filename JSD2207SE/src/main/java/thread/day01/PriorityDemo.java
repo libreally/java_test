@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 /**
  * 线程的优先级

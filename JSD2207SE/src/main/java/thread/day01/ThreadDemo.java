@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 /**
  * 多线程的创建方式一：继承与Thread的创建

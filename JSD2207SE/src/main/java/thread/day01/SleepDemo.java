@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 
 import java.util.Scanner;
 /**

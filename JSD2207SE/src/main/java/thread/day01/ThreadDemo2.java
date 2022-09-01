@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 /**
  * 第二种创建线程的方式:实现Runnable接口单独定义线程任务
  */

@@ -1,4 +1,4 @@
-package thread;
+package thread.day01;
 /**
  * 获取线程信息的相关方法
  */
