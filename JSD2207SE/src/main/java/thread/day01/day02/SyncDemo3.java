@@ -1,4 +1,4 @@
-package thread.day02;
+package thread.day01.day02;
 
 public class SyncDemo3 {
     public static void main(String[] args) {
@@ -22,7 +22,8 @@ public class SyncDemo3 {
         都能做到同步效果(多个线程分开执行)。
      */
 class Foo{
-    public synchronized static void dosome(){
+    public static void dosome(){
+        synchronized(Foo.class){
         try {
             Thread t = Thread.currentThread();
             System.out.println(t.getName()+":正在执行dosome方法...");
@@ -31,5 +32,6 @@ class Foo{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
     }
 }

@@ -1,3 +1,5 @@
+package Thread;
+
 /**
  * 多线程的创建方式一：继承与Thread的创建
  * 1.创建继承与thread的子类

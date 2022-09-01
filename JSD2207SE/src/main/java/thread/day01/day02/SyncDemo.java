@@ -1,4 +1,4 @@
-package thread.day02;
+package thread.day01.day02;
 
 /**
  * 多线程并发安全问题
