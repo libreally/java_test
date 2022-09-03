@@ -7,12 +7,13 @@ import java.io.*;
  * 缓冲字符输入流，内部维护一个默认8192长度的char数组。可以块读文本数据加速。
  * 并且可以按行读取字符串
  */
-public class BRDemo {
+public class BRDemo  {
     public static void main(String[] args) throws IOException {
         FileInputStream fis = new FileInputStream(
                 "./src/main/java/io/BRDemo.java");
         InputStreamReader isr = new InputStreamReader(fis);
         BufferedReader br = new BufferedReader(isr);
+
         /*
             BufferedReader提供的方法:
             String readLine()

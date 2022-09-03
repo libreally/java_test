@@ -18,6 +18,11 @@ public class Cilent {
     }
     public void start(){
         try{
+            ServerHandler handler=new ServerHandler();
+            Thread t=new Thread(handler);
+            t.setDaemon(true);
+            t.start();;
+
             OutputStream out=socket.getOutputStream();
             OutputStreamWriter osw=new OutputStreamWriter(out, StandardCharsets.UTF_8);
             BufferedWriter bw=new BufferedWriter(osw);
@@ -38,5 +43,21 @@ public class Cilent {
     public static void main(String[] args) {
         Cilent cilent=new Cilent();
         cilent.start();
+    }
+    private class ServerHandler implements Runnable{
+        @Override
+        public void run() {
+            try {
+                InputStream in=socket.getInputStream();
+                InputStreamReader isr=new InputStreamReader(in);
+                BufferedReader br=new BufferedReader(isr);
+                String message;
+                while((message= br.readLine())!=null){
+                    System.out.println("message = " + message);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

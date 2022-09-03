@@ -1,14 +1,14 @@
 package ext;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Server {
+    List<PrintWriter> allOut=new ArrayList<>();
     private ServerSocket serverSocket;
 
     public Server() {
@@ -53,16 +53,42 @@ public class Server {
 
         @Override
         public void run() {
+            PrintWriter pw=null;
             try {
                 InputStream in = socket.getInputStream();
                 InputStreamReader isr = new InputStreamReader(in, StandardCharsets.UTF_8);
                 BufferedReader br = new BufferedReader(isr);
+
+                OutputStream os=socket.getOutputStream();
+                OutputStreamWriter osw=new OutputStreamWriter(os);
+                BufferedWriter bw=new BufferedWriter(osw);
+                pw=new PrintWriter(bw,true);
+                synchronized (allOut){
+                    allOut.add(pw);
+                }
+                System.out.println(host+"当前人数："+allOut.size());
                 String message;
                 while ((message = br.readLine()) != null) {
-                    System.out.println(host + "说:" + message);
+                    System.out.println(host + "客户端:" + message);
+                    synchronized (allOut){
+                        for (PrintWriter o:allOut){
+                            o.println(host + "说:" + message);
+                        }
+                    }
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+            }finally {
+                synchronized (allOut){
+                    allOut.remove(pw);
+                }
+                System.out.println(host+"下线，当前人数："+allOut.size());
+                try {
+                    socket.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
             }
         }
     }
