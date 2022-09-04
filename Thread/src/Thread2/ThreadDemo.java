@@ -1,11 +1,11 @@
-package Thread;
+package Thread2;
 
 /**
  * 例子：三个窗口卖票 总共100张
  *
- * Thread方法
+ * Thread方法 同步方法解决线程
  */
-public class WindowTest {
+public class ThreadDemo {
 
     public static void main(String[] args) {
         window w1 = new window();
@@ -25,20 +25,16 @@ public class WindowTest {
 
 class window extends Thread {
     private static int ticket = 100;
-    private static Object obj =new Object();
     @Override
     public void run() {
         while (true) {
-           // synchronized(WindowTest.class)
-            synchronized(obj){
-                if (ticket > 0) {
-                    System.out.println(getName() + "卖票，票号为：" + ticket);
-                    ticket--;
-                } else {
-                    break;
-                }
-            }
-
+               show();
+        }
+    }
+    private static synchronized void show(){//同步监视器为当前类ThreadDemo
+        if (ticket > 0) {
+            System.out.println(Thread.currentThread().getName() + "卖票，票号为：" + ticket);
+            ticket--;
         }
     }
 }
