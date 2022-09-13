@@ -10,7 +10,7 @@ import java.io.ObjectInputStream;
 public class OISDemo {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         //将person.obj文件中的对象返序列化
-        FileInputStream fis = new FileInputStream("person.obj");
+        FileInputStream fis = new FileInputStream("./person.obj");
         ObjectInputStream ois = new ObjectInputStream(fis);
         /*
             对象输入流提供了反序列化操作:
