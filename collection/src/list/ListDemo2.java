@@ -1,4 +1,4 @@
-package jihe.list;
+package list;
 
 import java.util.ArrayList;
 import java.util.List;

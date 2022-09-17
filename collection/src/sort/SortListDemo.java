@@ -1,4 +1,4 @@
-package jihe.sort;
+package sort;
 
 import java.util.ArrayList;
 import java.util.Collections;

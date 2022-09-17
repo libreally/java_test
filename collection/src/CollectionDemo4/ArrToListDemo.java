@@ -1,6 +1,8 @@
-package jihe.CollectionDemo4;
+package CollectionDemo4;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 数组转化为集合

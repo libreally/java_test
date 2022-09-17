@@ -1,4 +1,4 @@
-package jihe.CollectionDemo1;
+package CollectionDemo1;
 
 import java.util.ArrayList;
 import java.util.Collection;

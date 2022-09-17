@@ -1,4 +1,4 @@
-package jihe.CollectionDemo1;
+package CollectionDemo3;
 
 public class Point {
     private int x;

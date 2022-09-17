@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/abnormal/abnormal.iml" filepath="$PROJECT_DIR$/abnormal/abnormal.iml" />
       <module fileurl="file://$PROJECT_DIR$/bbb/bbb.iml" filepath="$PROJECT_DIR$/bbb/bbb.iml" />
       <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection/collection.iml" filepath="$PROJECT_DIR$/collection/collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/feng_zhuang/feng_zhuang.iml" filepath="$PROJECT_DIR$/feng_zhuang/feng_zhuang.iml" />
       <module fileurl="file://$PROJECT_DIR$/gou_zao/gou_zao.iml" filepath="$PROJECT_DIR$/gou_zao/gou_zao.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_test.iml" filepath="$PROJECT_DIR$/.idea/java_test.iml" />
