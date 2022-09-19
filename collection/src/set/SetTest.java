@@ -4,9 +4,7 @@ import collection.Person;
 import collection.User;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  * set 存无序的不可重复的数据
@@ -24,11 +22,37 @@ public class SetTest {
         set.add(new Person("Tom",23));
         set.add(new User("Nick",67));
         set.add(new User("Nick",67));
-
         Iterator<Object> iterator = set.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
+    }
+    @Test
+    public void test2(){
+        Set<Object> set=new LinkedHashSet<>();
+        set.add(123);
+        set.add(456);
+        set.add("AA");
+        set.add("CC");
+        set.add(new Person("Tom",23));
+        set.add(new User("Nick",67));
+        set.add(new User("Nick",67));
+        for (Object o : set) {
+            System.out.println(o);
+        }
 
+    }
+    @Test
+    public void test3(){
+        TreeSet<Integer> set=new TreeSet<>();
+        //不可添加不同类的对象,
+        //按照添加对象的指定属性，进行排序
+        set.add(34);
+        set.add(54);
+        set.add(84);
+        set.add(39);
+        for (Integer o : set) {
+            System.out.println(o);//34 39 54 84
+        }
     }
 }
