@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/collection/collection.iml" filepath="$PROJECT_DIR$/collection/collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/feng_zhuang/feng_zhuang.iml" filepath="$PROJECT_DIR$/feng_zhuang/feng_zhuang.iml" />
       <module fileurl="file://$PROJECT_DIR$/gou_zao/gou_zao.iml" filepath="$PROJECT_DIR$/gou_zao/gou_zao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/io/io.iml" filepath="$PROJECT_DIR$/io/io.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_test.iml" filepath="$PROJECT_DIR$/.idea/java_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/kehuguanli/kehuguanli.iml" filepath="$PROJECT_DIR$/kehuguanli/kehuguanli.iml" />
       <module fileurl="file://$PROJECT_DIR$/myproject/myproject.iml" filepath="$PROJECT_DIR$/myproject/myproject.iml" />

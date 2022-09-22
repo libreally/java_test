@@ -2,7 +2,10 @@ package exe;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Test2 {
     @Test
