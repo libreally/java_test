@@ -2,7 +2,7 @@ package Thread;
 
 /**
  * 多线程的创建方式一：继承与Thread的创建
- * 1.创建继承与thread的子类
+ * 1.创建继承于thread的子类
  * 2.重写run方法
  * 3.创建thread类的子类的对象
  * 4.通过此对象调用start（）方法

@@ -78,6 +78,15 @@ public class MapTest {
         //返回map键值对
         Set<Map.Entry<String, Integer>> entries = map.entrySet();
         System.out.println("entries = " + entries);
+
+        Set<Map.Entry<String, Integer>> entries1 = map.entrySet();
+        Iterator<Map.Entry<String, Integer>> iterator1 = entries1.iterator();
+        while(iterator1.hasNext()){
+
+            Map.Entry<String, Integer> next = iterator1.next();
+            System.out.println(next);
+        }
+
     }
         /**
          * 处理配置文件Properties
@@ -99,11 +108,13 @@ public class MapTest {
         map.put(u4,66);
 
         Set<Map.Entry<Object, Integer>> entries = map.entrySet();
-        Iterator<Map.Entry<Object, Integer>> iterator = entries.iterator();
+        /*Iterator<Map.Entry<Object, Integer>> iterator = entries.iterator();
         while (iterator.hasNext()){
             Map.Entry<Object, Integer> next = iterator.next();
+            Object key = next.getKey();
+            Integer value=next.getValue();
             System.out.println(next.getKey()+"------------->"+next.getValue());
-        }
+        }*/
 
 
     }
