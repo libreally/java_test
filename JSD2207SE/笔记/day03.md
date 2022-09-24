@@ -19,7 +19,6 @@ java.io.ObjectOutputStream和ObjectInputSteam
 ```java
 package io;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -34,16 +33,16 @@ import java.io.ObjectOutputStream;
  * 将写出的对象按照其结构转换为一组字节的过程。
  */
 public class OOSDemo {
-    public static void main(String[] args) throws IOException {
-        String name = "苍老师";
-        int age = 55;
-        String gender = "男";
-        String[] otherInfo = {"摄影技术一流","喜欢拍片儿","是一名技术老师"};
-        //将该Person对象写入文件person.obj中
-        Person p = new Person(name,age,gender,otherInfo);
+  public static void main(String[] args) throws IOException {
+    String name = "苍老师";
+    int age = 55;
+    String gender = "男";
+    String[] otherInfo = {"摄影技术一流", "喜欢拍片儿", "是一名技术老师"};
+    //将该Person对象写入文件person.obj中
+    Person p = new Person(name, age, gender, otherInfo);
 
-        FileOutputStream fos = new FileOutputStream("person.obj");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
+    FileOutputStream fos = new FileOutputStream("person.obj");
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
         /*
             对象输出流提供了一个直接写出对象的方法(进行对象序列化的操作)
             void writeObject(Object obj)
@@ -56,12 +55,12 @@ public class OOSDemo {
             并且该类中所有引用类型属性也必须实现该接口，否则会抛出上述异常。
 
          */
-        oos.writeObject(p);
-        System.out.println("写出完毕!");
-        oos.close();
+    oos.writeObject(p);
+    System.out.println("写出完毕!");
+    oos.close();
 
 
-    }
+  }
 }
 
 ```
@@ -72,7 +71,6 @@ public class OOSDemo {
 package io;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
@@ -80,18 +78,18 @@ import java.io.ObjectInputStream;
  * 使用对象输入流完成对象的反序列化
  */
 public class OISDemo {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        //从person.obj文件中将对象反序列化回来
-        FileInputStream fis = new FileInputStream("person.obj");
-        ObjectInputStream ois = new ObjectInputStream(fis);
+  public static void main(String[] args) throws IOException, ClassNotFoundException {
+    //从person.obj文件中将对象反序列化回来
+    FileInputStream fis = new FileInputStream("person.obj");
+    ObjectInputStream ois = new ObjectInputStream(fis);
         /*
             Object readObject()
             该方法会进行对象的反序列化，如果对象流通过其连接的流读取的字节分析并非
             是一个java对象时，会抛出异常:ClassNotFoundException
          */
-        Person p = (Person)ois.readObject();
-        System.out.println(p);
-    }
+    Person p = (Person) ois.readObject();
+    System.out.println(p);
+  }
 }
 ```
 

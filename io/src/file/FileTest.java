@@ -19,11 +19,11 @@ public class FileTest {
     public void test(){
         //1.创建文件方式1
         File file = new File("hello.txt");//相对路径
-        File file1 = new File("D:\\abc\\java_test\\io\\he.txt");//绝对路径
+        File file1 = new File("D:\\abc\\java_test\\io\\notenote.txt");//绝对路径
         System.out.println(file);
         System.out.println(file1);
         //2.创建文件方式2
-        File file2=new File("D:\\abc\\java_test\\io","io");
+        File file2=new File("D:\\abc\\java_test\\io", "ReaderWriter");
         System.out.println(file2);
         //3.创建文件方式3
         File file3 = new File(file2,"test.txt");
@@ -43,13 +43,13 @@ public class FileTest {
     @Test
     public void test2(){
         File file1 = new File("hello.txt");
-        File file2 = new File("D:\\abc\\java_test\\io\\he.txt");
+        File file2 = new File("D:\\abc\\java_test\\io\\note.txt");
         System.out.println(file1.getAbsoluteFile());
         System.out.println(file1.getName());
         System.out.println(file1.getPath());
         System.out.println(file1.getParent());
         System.out.println(file1.length());
-        System.out.println(file1.lastModified());
+        System.out.println(new Date(file1.lastModified()));
         System.out.println();
         System.out.println(file2.getAbsoluteFile());
         System.out.println(file2.getName());

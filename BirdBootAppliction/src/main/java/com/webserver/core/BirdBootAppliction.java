@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class BirdBootApplication {
+class BirdBootApplication {
     private ServerSocket serverSocket;
     public BirdBootApplication(){
         try {
