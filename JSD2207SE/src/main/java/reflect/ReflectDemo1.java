@@ -1,8 +1,6 @@
 package reflect;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -32,9 +30,15 @@ public class ReflectDemo1 {
             3:ClassLoader类加载器形式
          */
 //        Class cls = String.class;//获取String的类对象
-
 //        Class cls = Class.forName("java.lang.String");
-
+        /*
+            测试类:
+            java.util.ArrayList
+            java.util.HashMap
+            java.io.FileInputStream
+            java.lang.String
+            reflect.Person
+         */
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入一个类名");
         String className = scanner.nextLine();

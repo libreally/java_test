@@ -15,9 +15,11 @@
       <module fileurl="file://$PROJECT_DIR$/kehuguanli/kehuguanli.iml" filepath="$PROJECT_DIR$/kehuguanli/kehuguanli.iml" />
       <module fileurl="file://$PROJECT_DIR$/myproject/myproject.iml" filepath="$PROJECT_DIR$/myproject/myproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/object/object.iml" filepath="$PROJECT_DIR$/object/object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflect/reflect.iml" filepath="$PROJECT_DIR$/reflect/reflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled1/untitled1.iml" filepath="$PROJECT_DIR$/untitled1/untitled1.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled3/untitled3.iml" filepath="$PROJECT_DIR$/untitled3/untitled3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>
 </project>

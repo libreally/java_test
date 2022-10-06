@@ -1,13 +1,13 @@
 package reflect;
-import reflect.annotations.AutoRunClass;
 
+import reflect.annotations.AutoRunClass;
+import reflect.annotations.AutoRunMethod;
 
 /**
  * 使用当前类测试反射机制
  */
 @AutoRunClass
 public class Person {
-
     private String name = "张三";
     private int age = 22;
 
@@ -17,10 +17,7 @@ public class Person {
         this.name = name;
         this.age = age;
     }
-    private void hehe(){
-        System.out.println("我是私有方法");
-    }
-
+    @AutoRunMethod(15)
     public void sayHello(){
         System.out.println(name+":hello!");
     }
@@ -28,11 +25,11 @@ public class Person {
     public void sayHi(){
         System.out.println(name+":hi!");
     }
-
+    @AutoRunMethod()//@AutoRunMethod()那么value采取默认值
     public void dance(){
         System.out.println(name+"正在跳舞");
     }
-
+    @AutoRunMethod//@AutoRunMethod那么value依然采取默认值
     public void sing(){
         System.out.println(name+"正在唱歌");
     }
@@ -53,6 +50,10 @@ public class Person {
         for(int i=0;i<count;i++){
             System.out.println(name+"说:"+info);
         }
+    }
+
+    private void hehe(){
+        System.out.println("我是Person的私有方法!");
     }
 
     @Override

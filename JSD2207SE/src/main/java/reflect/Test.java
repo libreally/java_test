@@ -1,6 +1,5 @@
 package reflect;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
@@ -14,28 +13,19 @@ import java.lang.reflect.Modifier;
  * 4:执行invoke来调用这个方法
  */
 public class Test {
-    public static void main(String[] args) {
-        try {
-            Class cls=Class.forName("reflect.Person");
-            Object o = cls.newInstance();
-            Method[] method = cls.getDeclaredMethods();
-            for (Method method1:method){
-                if ( method1.getParameterCount()==0 &&
-                        method1.getModifiers()== Modifier.PUBLIC
-                &&method1.getName().contains("e")){
-                    System.out.println(method1.getName());
-                    method1.invoke(o);
-                }
+    public static void main(String[] args) throws Exception {
+        Class cls = Class.forName("reflect.Person");
+        Object obj = cls.newInstance();
+        Method[] methods = cls.getDeclaredMethods();
+        for(Method method : methods){
+            //判断是否为无参数方法
+            if(method.getParameterCount()==0 &&
+               method.getModifiers()== Modifier.PUBLIC &&//是否为公开方法
+               method.getName().contains("e")//名字是否含有字符"e"
+            ){
+                System.out.println("调用方法:"+method.getName()+"()");
+                method.invoke(obj);
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
         }
-
     }
 }

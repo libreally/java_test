@@ -13,10 +13,9 @@ public class FileInOutputStreamTest {
      * 指定路径下的文件复制的方法
      */
     public void copyFile(String  srcPath,String destPath){
-        File srcFile = new File(srcPath);
-        File destFile = new File(destPath);
-        try (FileInputStream fis = new FileInputStream(srcFile);
-             FileOutputStream fos = new FileOutputStream(destFile)) {
+
+        try (FileInputStream fis = new FileInputStream(srcPath);
+             FileOutputStream fos = new FileOutputStream(destPath)) {
             byte[] bytes = new byte[1024];
             int len;
             while ((len = fis.read(bytes)) != -1) {

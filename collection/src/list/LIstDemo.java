@@ -2,10 +2,7 @@ package list;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class LIstDemo {
     public static void main(String[] args) {
@@ -59,4 +56,15 @@ public class LIstDemo {
         list.addAll(list1);
         System.out.println(list);
     }
+   /**
+    * 提供一个方法 用于遍历HashMap<String,String>中的所有value
+    并存放在list中返回*/
+   public List<String> getValueList(HashMap<String,String> map){
+       ArrayList<String> list=new ArrayList<>();
+       Collection<String> values = map.values();
+       for (String value:values) {
+           list.add(value);
+       }
+       return list;
+   }
 }
