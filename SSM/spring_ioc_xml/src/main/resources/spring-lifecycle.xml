@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--init-method="initMethod" destroy-method="destroyMethod"创建和销毁方法-->
+    <bean id="user" class="com.atguigu.spring.pojo.User" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="id" value="1"/>
+        <property name="name" value="wxx"/>
+        <property name="password" value="ggg"/>
+        <property name="age" value="15"/>
+    </bean>
+    <bean id="myBeanPostProcessor" class="com.atguigu.spring.pojo.MyBeanPostProcessor"/>
+
+</beans>

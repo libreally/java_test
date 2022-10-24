@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!--bean ： 将对象交给IOC容器管理-->
+    <bean id="studentOne" class="com.atguigu.spring.pojo.Student"/>
+    <!--通过setter方式注入-->
+    <!--property通过成员变量的方法进行赋值   -->
+    <bean id="studentTwo" class="com.atguigu.spring.pojo.Student">
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+        <property name="gander" value="男"/>
+    </bean>
+    <!--通过构造器注入-->
+    <bean id="studentThree" class="com.atguigu.spring.pojo.Student">
+        <constructor-arg value="1"/>
+        <constructor-arg value="李四"/>
+        <constructor-arg value="女" name="gander"/>
+    </bean>
+    <!--给类 类型的属性赋值 ref-->
+    <bean id="studentFour" class="com.atguigu.spring.pojo.Student">
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+        <property name="gander" value="男"/>
+        <property name="Clazz" ref="Clazz"/>
+    </bean>
+    <bean id="Clazz" class="com.atguigu.spring.pojo.Clazz">
+        <property name="id" value="1"/>
+        <property name="cname" value="威武班"/>
+    </bean>
+    <!--给数组的属性赋值 ref-->
+    <bean id="studentFive" class="com.atguigu.spring.pojo.Student">
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+        <property name="gander" value="男"/>
+        <property name="clazz">
+            <array>
+                <value>抽烟</value>
+                <value>烫头</value>
+                <value>喝酒</value>
+            </array>
+        </property>
+        <property name="teacherMap" ref="maps">
+           <!-- <map>
+                <entry key="5" value-ref="teacherThree"/>
+                <entry key="2" value-ref="teacherOne"/>
+            </map>-->
+        </property>
+    </bean>
+    <bean id="teacherOne" class="com.atguigu.spring.pojo.Teacher">
+        <property name="id" value="2"/>
+        <property name="name" value="shdg"/>
+    </bean>
+    <bean id="teacherThree" class="com.atguigu.spring.pojo.Teacher">
+        <property name="id" value="5"/>
+        <property name="name" value="shdg"/>
+    </bean>
+    <!--给list的属性赋值 ref-->
+    <bean id="ClazzOne" class="com.atguigu.spring.pojo.Clazz">
+        <property name="id" value="1"/>
+        <property name="cname" value="威武班"/>
+        <property name="students" ref="listBean">
+            <!--<list>
+                <ref bean="studentOne"/>
+                <ref bean="studentThree"/>
+                <ref bean="studentTwo"/>
+            </list>-->
+        </property>
+    </bean>
+    <!--list类型的bean-->
+    <util:list id="listBean">
+        <ref bean="studentOne"/>
+        <ref bean="studentThree"/>
+        <ref bean="studentTwo"/>
+    </util:list>
+    <!--map类型的bean-->
+    <util:map id="maps">
+        <entry key="5" value-ref="teacherThree"/>
+        <entry key="2" value-ref="teacherOne"/>
+    </util:map>
+    <bean id="studentSix" class="com.atguigu.spring.pojo.Student" p:id="2"/>
+
+</beans>
