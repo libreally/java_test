@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BirdBootAppliction" />
+        <module name="spring_helloWorld" />
         <module name="JSD2207SE" />
+        <module name="spring_ioc_xml" />
       </profile>
     </annotationProcessing>
   </component>
