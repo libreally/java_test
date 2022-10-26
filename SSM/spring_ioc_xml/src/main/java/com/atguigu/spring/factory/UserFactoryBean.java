@@ -1,4 +1,4 @@
-package com.atguigu.spring.pojo.factory;
+package com.atguigu.spring.factory;
 
 import com.atguigu.spring.pojo.User;
 import org.springframework.beans.factory.FactoryBean;

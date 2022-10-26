@@ -9,5 +9,6 @@
         <property name="password" value="ggg"/>
         <property name="age" value="15"/>
     </bean>
+    <bean id="myBeanPostProcessor" class="com.atguigu.spring.pojo.MyBeanPostProcessor"/>
 
 </beans>

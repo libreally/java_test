@@ -1,4 +1,4 @@
-package com.atguigu.spring.pojo;
+package com.atguigu.spring;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -10,7 +10,7 @@ public class helloWorldTest {
 //        获取IOC容器
         ApplicationContext ioc = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 //获取IOC容器bean对象
-        helloWorld helloWorld = (com.atguigu.spring.pojo.helloWorld) ioc.getBean("helloWorld");
+        helloWorld helloWorld = (com.atguigu.spring.helloWorld) ioc.getBean("helloWorld");
         helloWorld.sayHello();
     }
 }

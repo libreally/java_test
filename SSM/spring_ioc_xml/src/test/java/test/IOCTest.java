@@ -1,5 +1,6 @@
 package test;
 
+import com.atguigu.spring.controller.UserController;
 import com.atguigu.spring.pojo.Student;
 import com.atguigu.spring.pojo.User;
 import org.junit.Test;
@@ -31,5 +32,11 @@ public class IOCTest {
         User bean = ioc.getBean(User.class);
         System.out.println(bean);
         ioc.close();
+    }
+    @Test
+    public void Autowired(){
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("spring.autoeire.xml");
+        UserController userController = ioc.getBean(UserController.class);
+        userController.saveUser();
     }
 }
