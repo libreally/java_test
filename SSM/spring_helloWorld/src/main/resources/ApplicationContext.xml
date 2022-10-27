@@ -3,5 +3,5 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
    <!--bean ： 将对象交给IOC容器管理-->
-    <bean id="helloWorld" class="com.atguigu.spring.pojo.helloWorld"/>
+    <bean id="helloWorld" class="com.atguigu.spring.helloWorld"/>
 </beans>

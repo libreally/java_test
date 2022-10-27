@@ -1,4 +1,4 @@
-package com.atguigu.spring.pojo;
+package com.atguigu.spring;
 
 public class helloWorld {
     public void sayHello() {
