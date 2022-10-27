@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-proxy" />
+        <module name="SSM" />
         <module name="BirdBootAppliction" />
         <module name="spring_helloWorld" />
         <module name="JSD2207SE" />
