@@ -1,5 +1,6 @@
 package com.atguigu.proxy;
 
+import com.atguigu.spring.proxy.Calculator;
 import com.atguigu.spring.proxy.ProxyFactory;
 import org.junit.Test;
 
@@ -9,6 +10,7 @@ public class ProxyTes {
         /*CalculatorStaticProxy proxy = new CalculatorStaticProxy(new CalculatorImpl());
         proxy.add(1,2);*/
         ProxyFactory proxyFactory=new ProxyFactory(new CalculatorImpl());
-        proxyFactory.getProxy();
+        Calculator proxy = (Calculator) proxyFactory.getProxy();
+        proxy.add(1,2);
     }
 }
