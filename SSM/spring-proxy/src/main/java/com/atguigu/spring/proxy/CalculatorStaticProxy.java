@@ -1,7 +1,7 @@
 package com.atguigu.spring.proxy;
 
 /**
- * 代理类
+ * 静态代理类
  */
 public class CalculatorStaticProxy implements Calculator {
 

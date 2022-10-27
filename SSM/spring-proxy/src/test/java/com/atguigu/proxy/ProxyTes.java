@@ -1,6 +1,7 @@
 package com.atguigu.proxy;
 
 import com.atguigu.spring.proxy.Calculator;
+import com.atguigu.spring.proxy.CalculatorImpl;
 import com.atguigu.spring.proxy.ProxyFactory;
 import org.junit.Test;
 

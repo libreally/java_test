@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 import java.util.Arrays;
 
 /**
- * 动态代理
+ * jdk方式动态代理
  */
 public class ProxyFactory {
     private Object terget;
