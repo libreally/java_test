@@ -1,4 +1,4 @@
-package com.atguigu.spring.proxy;
+package com.atguigu.spring.aop.xml;
 
 public interface Calculator {
     int add(int i,int j);

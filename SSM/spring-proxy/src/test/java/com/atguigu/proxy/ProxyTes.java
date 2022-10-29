@@ -6,6 +6,9 @@ import com.atguigu.spring.proxy.ProxyFactory;
 import org.junit.Test;
 
 public class ProxyTes {
+
+
+public class ProxyTes {
     @Test
     public void test() {
         /*CalculatorStaticProxy proxy = new CalculatorStaticProxy(new CalculatorImpl());
