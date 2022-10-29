@@ -17,6 +17,9 @@
             <aop:after-throwing method="afterThrowingAdviceMethod" throwing="ex" pointcut-ref="pointCut"/>
             <aop:around method="aroundAdviceMethod" pointcut-ref="pointCut"/>
         </aop:aspect>
+        <aop:aspect ref="validateAspect">
+            <aop:before method="beforeMethod" pointcut-ref="pointCut"/>
+        </aop:aspect>
     </aop:config>
 
 </beans>
